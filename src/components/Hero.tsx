@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
@@ -10,10 +13,14 @@ const Hero = () => {
           muted
           loop
           playsInline
+          preload="metadata"
           className="w-full h-full object-cover"
+          poster="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMDkxQTMzIi8+PC9zdmc+"
         >
-          <source src="https://video.fkut1-1.fna.fbcdn.net/v/t39.25447-2/536488090_1055406762882418_5577006671624639006_n.mp4?_nc_cat=109&ccb=1-7&_nc_sid=984c6a&efg=eyJybHIiOjE1NDIsInJsYSI6NDAzMywidmVuY29kZV90YWciOiJiZXR0ZXJfbWF4X3JhdGVfYml0cmF0ZS0xMDgwLXZwOSJ9&_nc_ohc=xQJr4x9z7xAQ7kNvwHHvwXW&rl=1542&vabr=857&_nc_ht=video.fkut1-1.fna&oh=00_AfDwqgTGXG9lcrRGKaTwVSCjHqH4Pr6FwD0aAIQB2KQu0Q&oe=68A8F8E8" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src="/api/placeholder/1920/1080" type="video/mp4" />
+          <div className="w-full h-full bg-bavarian-blue flex items-center justify-center">
+            <p className="text-white text-center">Loading video...</p>
+          </div>
         </video>
         
         {/* Elegant Overlay */}
@@ -28,14 +35,13 @@ const Hero = () => {
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="animate-fade-in animation-delay-500">
           <h1 className="text-6xl lg:text-8xl font-bavarian font-bold text-foreground mb-6 text-glow-gold">
-            Welcome to
+            {t('welcomeTo')}
           </h1>
           <h2 className="text-4xl lg:text-6xl font-bavarian font-bold text-primary mb-8 animate-glow">
-            Weihenstephan
+            {t('weihenstephan')}
           </h2>
           <p className="text-xl lg:text-2xl text-foreground/90 max-w-2xl mx-auto leading-relaxed animate-fade-in animation-delay-1000">
-            Experience the finest Bavarian tradition, where centuries of brewing heritage 
-            meets modern culinary excellence in an atmosphere of luxury and authenticity.
+            {t('heroDescription')}
           </p>
         </div>
         
