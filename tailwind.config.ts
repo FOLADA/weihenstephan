@@ -62,7 +62,8 @@ export default {
 			},
 			fontFamily: {
 				bavarian: ['var(--font-bavarian)'],
-				body: ['var(--font-body)']
+				body: ['var(--font-body)'],
+				fraktur: ['UnifrakturMaguntia', 'cursive'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

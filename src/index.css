@@ -2,100 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Base & design system */
 @layer base {
   :root {
-    /* Weihenstephan Bavarian Color Palette */
     --background: 218 84% 23%;
     --foreground: 0 0% 100%;
-
-    --card: 218 84% 23%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 218 84% 23%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 41 44% 55%;
-    --primary-foreground: 218 84% 23%;
-
-    --secondary: 200 66% 51%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 218 40% 15%;
-    --muted-foreground: 0 0% 70%;
-
-    --accent: 41 44% 55%;
-    --accent-foreground: 218 84% 23%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 41 44% 55%;
-    --input: 218 40% 15%;
-    --ring: 41 44% 55%;
-
-    --radius: 0.75rem;
-
-    /* Weihenstephan Brand Colors */
-    --bavarian-blue: 218 84% 23%;
     --bavarian-gold: 41 44% 55%;
-    --bavarian-white: 0 0% 100%;
-    --bavarian-black: 0 0% 0%;
-    --bavarian-light-blue: 200 66% 51%;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--bavarian-blue)), hsl(var(--bavarian-blue) / 0.8));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--bavarian-gold)), hsl(var(--bavarian-gold) / 0.9));
-    --gradient-overlay: linear-gradient(180deg, hsl(var(--bavarian-blue) / 0.8), hsl(var(--bavarian-blue) / 0.9));
-
-    /* Typography */
-    --font-bavarian: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
-
-    /* Shadows & Effects */
+    --bavarian-blue: 218 84% 23%;
+    --radius: 0.75rem;
     --shadow-luxury: 0 25px 60px -12px hsl(var(--bavarian-blue) / 0.4);
     --shadow-gold: 0 10px 30px -10px hsl(var(--bavarian-gold) / 0.3);
-    --glow-gold: 0 0 40px hsl(var(--bavarian-gold) / 0.2);
-
-    /* Animations */
     --transition-luxury: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-bavarian: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
   }
 
-  .dark {
-    /* Dark mode with enhanced Bavarian theme */
-    --background: 218 84% 15%;
-    --foreground: 0 0% 100%;
-    --card: 218 84% 18%;
-    --card-foreground: 0 0% 100%;
-    --popover: 218 84% 18%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 41 54% 65%;
-    --primary-foreground: 218 84% 15%;
-    --secondary: 200 66% 61%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 218 40% 10%;
-    --muted-foreground: 0 0% 75%;
-    --accent: 41 54% 65%;
-    --accent-foreground: 218 84% 15%;
-    --border: 41 44% 45%;
-    --input: 218 40% 10%;
-    --ring: 41 54% 65%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
+  body, html, #__next {
     @apply bg-background text-foreground font-body;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    position: relative;
+    min-height: 100%;
   }
 
   h1, h2, h3 {
@@ -103,23 +31,40 @@ All colors MUST be HSL.
   }
 }
 
+/* Luxury golden bubbles in pure CSS */
 @layer components {
-  .bavarian-pattern {
-    background-image: repeating-linear-gradient(
-      45deg,
-      hsl(var(--bavarian-light-blue)),
-      hsl(var(--bavarian-light-blue)) 10px,
-      hsl(var(--bavarian-white)) 10px,
-      hsl(var(--bavarian-white)) 20px
-    );
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: 
+      radial-gradient(circle, hsl(var(--bavarian-gold) / 0.25) 20%, transparent 20%) 5% 90% / 80px 80px no-repeat,
+      radial-gradient(circle, hsl(var(--bavarian-gold) / 0.2) 25%, transparent 25%) 20% 80% / 120px 120px no-repeat,
+      radial-gradient(circle, hsl(var(--bavarian-gold) / 0.3) 15%, transparent 15%) 35% 70% / 90px 90px no-repeat,
+      radial-gradient(circle, hsl(var(--bavarian-gold) / 0.28) 18%, transparent 18%) 50% 60% / 110px 110px no-repeat,
+      radial-gradient(circle, hsl(var(--bavarian-gold) / 0.22) 12%, transparent 12%) 65% 50% / 70px 70px no-repeat,
+      radial-gradient(circle, hsl(var(--bavarian-gold) / 0.3) 22%, transparent 22%) 80% 40% / 140px 140px no-repeat,
+      radial-gradient(circle, hsl(var(--bavarian-gold) / 0.27) 20%, transparent 20%) 90% 30% / 100px 100px no-repeat;
+    animation: floatBubbles 35s linear infinite;
   }
 
+  @keyframes floatBubbles {
+    0% {
+      background-position: 5% 100%, 20% 100%, 35% 100%, 50% 100%, 65% 100%, 80% 100%, 90% 100%;
+    }
+    50% {
+      background-position: 5% 50%, 20% 60%, 35% 55%, 50% 45%, 65% 50%, 80% 55%, 90% 60%;
+    }
+    100% {
+      background-position: 5% -20%, 20% -10%, 35% -15%, 50% -25%, 65% -20%, 80% -15%, 90% -10%;
+    }
+  }
+
+  /* Other luxury components */
   .text-glow-gold {
     text-shadow: 0 0 20px hsl(var(--bavarian-gold) / 0.5);
-  }
-
-  .hero-overlay {
-    background: var(--gradient-overlay);
   }
 
   .luxury-card {
@@ -163,7 +108,7 @@ All colors MUST be HSL.
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--gradient-gold);
+    background: linear-gradient(135deg, hsl(var(--bavarian-gold)), hsl(var(--bavarian-gold) / 0.9));
     transition: var(--transition-smooth);
   }
 

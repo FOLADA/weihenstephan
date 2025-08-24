@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+.glow {
+  text-shadow: 0 0 8px #facc15, 0 0 16px #fbbf24, 0 0 24px #f59e0b;
+}
+
 
 .logo {
   height: 6em;

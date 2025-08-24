@@ -1,114 +1,62 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
+import image1 from "@/assets/MenuImages/image00001.jpeg"
+import image2 from "@/assets/MenuImages/image00012.jpeg"
+import image3 from "@/assets/MenuImages/image00014.jpeg"
+import image4 from "@/assets/MenuImages/image00018.jpeg"
 
 const Menu = () => {
-  const [activeCategory, setActiveCategory] = useState('Beer');
+  const { t } = useLanguage();
 
-  const menuCategories = [
-    'Beer', 'Wine', 'Coffee/Tea', 'Cocktails', 'Chacha', 'Brandy/Cognac', 'Whiskey', 'Vodka/Tequila', 'Soft Drinks'
+  const menuItems = [
+    // Beer
+    { nameKey: 'weihenOriginalName', descKey: 'weihenOriginalDescription', price: '15₾', category: 'beer', image: image1 },
+    { nameKey: 'hefeweizenName', descKey: 'hefeweizenDescription', price: '18₾', category: 'beer', image: image2 },
+    { nameKey: 'pilsnerPremiumName', descKey: 'pilsnerPremiumDescription', price: '16₾', category: 'beer', image: image3 },
+    { nameKey: 'darkBeerSpecialName', descKey: 'darkBeerSpecialDescription', price: '17₾', category: 'beer', image: image4 },
   ];
 
-  const menuItems = {
-    Beer: [
-      { name: 'Weihenstephan Original', nameGeo: 'ვაიჰენშტეფანი ორიგინალი', price: '15₾', volume: '0.5L', description: 'Traditional Bavarian lager with rich malty flavor' },
-      { name: 'Hefeweizen', nameGeo: 'ჰეფევაიცენი', price: '18₾', volume: '0.5L', description: 'Classic wheat beer with banana and clove notes' },
-      { name: 'Pilsner Premium', nameGeo: 'პილსნერ პრემიუმი', price: '16₾', volume: '0.5L', description: 'Crisp and refreshing with noble hop character' },
-      { name: 'Dark Beer Special', nameGeo: 'მუქი ლუდი სპეციალი', price: '17₾', volume: '0.5L', description: 'Rich and complex dark beer with roasted malts' },
-    ],
-    Wine: [
-      { name: 'Riesling', nameGeo: 'რისლინგი', price: '35₾', volume: '150ml', description: 'Elegant German white wine with floral notes' },
-      { name: 'Gewürztraminer', nameGeo: 'გევიურცტრამინერი', price: '40₾', volume: '150ml', description: 'Aromatic white wine with spice and lychee' },
-      { name: 'Pinot Noir', nameGeo: 'პინო ნუარი', price: '45₾', volume: '150ml', description: 'Light-bodied red with cherry and earth tones' },
-      { name: 'House Red Blend', nameGeo: 'სახლის წითელი ნაზავი', price: '30₾', volume: '150ml', description: 'Smooth and approachable house selection' },
-    ],
-    'Coffee/Tea': [
-      { name: 'Bavarian Coffee', nameGeo: 'ბავარიული ყავა', price: '8₾', volume: '200ml', description: 'Rich espresso with local alpine cream' },
-      { name: 'German Breakfast Tea', nameGeo: 'გერმანული საუზმე ჩაი', price: '6₾', volume: '300ml', description: 'Traditional blend with bergamot' },
-      { name: 'Herbal Mountain Tea', nameGeo: 'მთის მცენარეული ჩაი', price: '7₾', volume: '300ml', description: 'Organic herbs from Bavarian mountains' },
-    ],
-    Cocktails: [
-      { name: 'Bavarian Mule', nameGeo: 'ბავარიული მულე', price: '25₾', volume: '300ml', description: 'Beer-based cocktail with ginger and lime' },
-      { name: 'Alpine Spritz', nameGeo: 'ალპური შპრიცი', price: '22₾', volume: '250ml', description: 'Refreshing aperitif with elderflower' },
-      { name: 'Munich Martini', nameGeo: 'მიუნხური მარტინი', price: '28₾', volume: '120ml', description: 'Premium gin cocktail with juniper essence' },
-    ],
-    Chacha: [
-      { name: 'Premium Georgian Chacha', nameGeo: 'პრემიუმ ქართული ჭაჭა', price: '12₾', volume: '50ml', description: 'Traditional grape spirit, aged in oak' },
-      { name: 'Honey Chacha', nameGeo: 'თოვლიანი ჭაჭა', price: '15₾', volume: '50ml', description: 'Smooth chacha infused with mountain honey' },
-    ],
-    'Brandy/Cognac': [
-      { name: 'French Cognac VSOP', nameGeo: 'ფრანგული კონიაკი VSOP', price: '35₾', volume: '40ml', description: 'Refined cognac with vanilla and oak notes' },
-      { name: 'German Brandy', nameGeo: 'გერმანული ბრენდი', price: '20₾', volume: '40ml', description: 'Smooth fruit brandy from local distillery' },
-    ],
-    Whiskey: [
-      { name: 'Scottish Single Malt', nameGeo: 'შოტლანდიური სინგლ მოლტი', price: '45₾', volume: '40ml', description: 'Aged 12 years with peat and smoke' },
-      { name: 'Irish Whiskey', nameGeo: 'ირლანდიური ვისკი', price: '30₾', volume: '40ml', description: 'Triple distilled for exceptional smoothness' },
-    ],
-    'Vodka/Tequila': [
-      { name: 'Premium Vodka', nameGeo: 'პრემიუმ არაყი', price: '18₾', volume: '40ml', description: 'Crystal clear, distilled from winter wheat' },
-      { name: 'Silver Tequila', nameGeo: 'ვერცხლისფერი ტეკილა', price: '25₾', volume: '40ml', description: '100% agave, smooth and crisp' },
-    ],
-    'Soft Drinks': [
-      { name: 'Bavarian Lemonade', nameGeo: 'ბავარიული ლიმონათი', price: '8₾', volume: '300ml', description: 'Fresh Alpine spring water with lemon' },
-      { name: 'Apple Schorle', nameGeo: 'ვაშლის შორლე', price: '7₾', volume: '300ml', description: 'Traditional German apple juice with sparkling water' },
-      { name: 'Elderflower Sparkling', nameGeo: 'ზღმარტლის მინერალური', price: '9₾', volume: '300ml', description: 'Refreshing elderflower with bubbles' },
-    ],
-  };
-
   return (
-    <section id="menu" className="py-20 bg-muted/20">
+    <section id="menu" className="py-24 bg-gradient-to-br from-amber-50/10 via-amber-100/10 to-amber-50/5">
       <div className="container mx-auto px-6 lg:px-8">
+
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl lg:text-6xl font-bavarian font-bold text-foreground mb-6">
-            Menu
+        <div className="text-center mb-20 animate-fade-in">
+          <h2 className="text-5xl lg:text-6xl font-bavarian font-bold text-foreground mb-4 tracking-wide">
+            {t('menu')}
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover our carefully curated selection of premium beverages and authentic Bavarian specialties, 
-            each crafted with passion and tradition.
+          <div className="w-28 h-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 mx-auto mb-6 rounded-full shadow-md"></div>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            {t('heroDescription')}
           </p>
         </div>
 
-        {/* Category Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {menuCategories.map((category) => (
-            <Button
-              key={category}
-              variant={activeCategory === category ? "default" : "outline"}
-              onClick={() => setActiveCategory(category)}
-              className="transition-all duration-300 hover:scale-105"
+        {/* Menu Items Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {menuItems.map((item, index) => (
+            <Card 
+              key={index} 
+              className="menu-item luxury-card border-0 rounded-2xl shadow-lg bg-gradient-to-br from-amber-50/20 via-amber-50/10 to-amber-50/5 overflow-hidden"
             >
-              {category}
-            </Button>
-          ))}
-        </div>
-
-        {/* Menu Items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          {menuItems[activeCategory as keyof typeof menuItems]?.map((item, index) => (
-            <Card key={index} className="menu-item luxury-card border-0">
+              <div className="relative w-full aspect-[4/3]">
+                <img 
+                  src={item.image} 
+                  alt={t(item.nameKey)}
+                  className="w-full h-full object-contain bg-white rounded-t-2xl"
+                />
+              </div>
               <CardContent className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div className="flex-1">
-                    <h3 className="text-lg font-bavarian font-semibold text-foreground mb-1">
-                      {item.name}
+                    <h3 className="text-2xl font-bavarian font-bold text-foreground mb-2">
+                      {t(item.nameKey)}
                     </h3>
-                    <p className="text-sm text-muted-foreground font-medium mb-2">
-                      {item.nameGeo}
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                      {t(item.descKey)}
                     </p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div className="text-right ml-6">
-                    <div className="text-xl font-bold text-primary mb-1">
-                      {item.price}
-                    </div>
-                    <Badge variant="outline" className="text-xs">
-                      {item.volume}
-                    </Badge>
                   </div>
                 </div>
               </CardContent>
@@ -116,13 +64,22 @@ const Menu = () => {
           ))}
         </div>
 
-        {/* Service Charge Notice */}
-        <div className="text-center mt-12 p-6 luxury-card max-w-md mx-auto">
-          <p className="text-muted-foreground">
-            <span className="font-semibold text-primary">Service Charge:</span> 10% will be added to your bill
-          </p>
-          <p className="text-sm text-muted-foreground mt-2">
-            მომსახურების საფასური: 10% დაემატება თქვენს ანგარიშს
+        {/* "See More" Button */}
+        <div className="text-center mt-12">
+          <Link to="/menu">
+            <Button
+              className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 
+                         text-white font-bold text-xl px-14 py-5 rounded-full shadow-xl shadow-amber-500/50"
+            >
+              {t('seeMore')}
+            </Button>
+          </Link>
+        </div>
+
+        {/* Service Charge Card */}
+        <div className="text-center mt-16 p-8 luxury-card max-w-md mx-auto bg-gradient-to-br from-amber-50/30 via-amber-50/20 to-amber-50/10 shadow-xl rounded-2xl border border-amber-200/30">
+          <p className="text-lg md:text-xl text-muted-foreground">
+            <span className="font-bold text-amber-600">{t('serviceCharge')}</span>
           </p>
         </div>
       </div>
