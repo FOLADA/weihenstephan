@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Car, Calendar, MenuIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -29,12 +31,12 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/70"></div>
 
-<div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+<div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
   <h1 className="text-xl sm:text-2xl lg:text-3xl font-serif font-light text-foreground mb-2 tracking-wide">
     {t('welcomeTo')}
   </h1>
 
-  <div className="relative inline-block">
+  <div className="relative inline-block mb-12">
     {/* Premium glowing text */}
     <h2
   className="relative text-5xl sm:text-6xl lg:text-7xl font-[Fraktur] font-extrabold tracking-wide
@@ -47,7 +49,6 @@ const Hero = () => {
   {t('weihenstephan')}
 </h2>
 
-
     {/* Glow layers behind text */}
     <div className="absolute -inset-6 rounded-full blur-3xl
                     bg-gradient-to-r from-amber-900/30 via-yellow-800/20 to-amber-900/30
@@ -55,6 +56,64 @@ const Hero = () => {
     <div className="absolute -inset-6 blur-2xl
                     bg-gradient-to-r from-amber-600/30 via-yellow-500/20 to-amber-600/30
                     opacity-70 -z-10"></div>
+  </div>
+
+  {/* Clean Action Buttons */}
+  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16">
+    {/* Online Order Button */}
+    <Button
+      asChild
+      className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700
+                 text-white font-bold text-lg px-8 py-4 rounded-full
+                 shadow-xl shadow-amber-500/30
+                 border-2 border-amber-400/30
+                 min-w-[200px] sm:min-w-[220px]"
+    >
+      <a
+        href="https://glovoapp.com/ge/en/kutaisi/weih-kut/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-3"
+      >
+        <Car className="w-5 h-5" />
+        <span>{t('onlineOrder')}</span>
+      </a>
+    </Button>
+
+    {/* Table Reservation Button */}
+    <Button
+      asChild
+      className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700
+                 text-white font-bold text-lg px-8 py-4 rounded-full
+                 shadow-xl shadow-amber-500/30
+                 border-2 border-amber-400/30
+                 min-w-[200px] sm:min-w-[220px]"
+    >
+      <a
+        href="https://calendly.com/weihenstephan-booking/reservation"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-3"
+      >
+        <Calendar className="w-5 h-5" />
+        <span>{t('tableReservation')}</span>
+      </a>
+    </Button>
+
+    {/* View Menu Button */}
+    <Button
+      asChild
+      className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700
+                 text-white font-bold text-lg px-8 py-4 rounded-full
+                 shadow-xl shadow-amber-500/30
+                 border-2 border-amber-400/30
+                 min-w-[200px] sm:min-w-[220px]"
+    >
+      <Link to="/menu" className="flex items-center gap-3">
+        <MenuIcon className="w-5 h-5" />
+        <span>{t('viewMenu')}</span>
+      </Link>
+    </Button>
   </div>
 </div>
 

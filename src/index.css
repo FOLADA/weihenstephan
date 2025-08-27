@@ -115,4 +115,18 @@
   .navbar-link:hover::after {
     width: 100%;
   }
+
+  /* Shimmer animation for sophisticated buttons */
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) skewX(-12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(-12deg);
+    }
+  }
+
+  .animate-shine {
+    animation: shine 0.8s ease-out;
+  }
 }
