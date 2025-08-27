@@ -251,7 +251,7 @@ cultureDescription: {
   georgianKhinkaliName: { ka: 'ქართული ხინკალი', ru: 'Грузинские хинкали', en: 'Georgian Khinkali Dumplings' },
   georgianKhinkaliDesc: { ka: 'ტრადიციული ქართული ხინკალი', ru: 'Традиционные грузинские пельмени с мясным бульоном', en: 'Traditional Georgian soup dumplings with twisted tops' },
   
-  seafoodPlatterName: { ka: 'ზღვის პროდუქტების თაბაკი', ru: 'Морская тарелка', en: 'Seafood Platter' },
+  seafoodPlatterName: { ka: 'ზღვის პროდუქტების დაფა', ru: 'Морская тарелка', en: 'Seafood Platter' },
   seafoodPlatterDesc: { ka: 'კრევეტები, მიდიები, რვაფეხა, კალმარი, ბრინჯი ბოსტნეულით', ru: 'Креветки, мидии, осьминог, кальмар, рис с овощами', en: 'Shrimp, mussels, octopus, squid, rice with vegetables' },
   
   // Dessert Items
@@ -987,14 +987,24 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('ka');
+  const [language, setLanguage] = useState<Language>(() => {
+    // Load language from localStorage or default to 'ka'
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    return (savedLanguage as Language) || 'ka';
+  });
 
   const t = (key: string): string => {
     return translations[key]?.[language] || key;
   };
 
+  const updateLanguage = (lang: Language) => {
+    setLanguage(lang);
+    // Save language to localStorage
+    localStorage.setItem('selectedLanguage', lang);
+  };
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: updateLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );
