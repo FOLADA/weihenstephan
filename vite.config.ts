@@ -19,4 +19,19 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase limit to 1000 kB to reduce warnings
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split vendor chunks to reduce bundle size
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-components': ['@/components/ui/card', '@/components/ui/button'],
+          'language-context': ['@/contexts/LanguageContext'],
+          // Split large libraries into separate chunks
+          'lucide-icons': ['lucide-react'],
+        }
+      }
+    }
+  }
 }));
