@@ -156,7 +156,7 @@ cultureDescription: {
   searchIn: { ka: 'ძიება', ru: 'Поиск в', en: 'Search in' },
   loadingDeliciousItems: { ka: 'სასურველი ელემენტების ჩატვირთვა...', ru: 'Загрузка вкусных блюд...', en: 'Loading delicious items...' },
   seeMore: { ka: 'იხილეთ მეტი', ru: 'Смотреть больше', en: 'See More' },
-  ourFullMenu: { ka: 'ჩვენი სრული მენიუ', ru: 'Наше полное меню', en: 'Our Full Menu' },
+  ourFullMenu: { ka: 'ჩვენი მენიუ', ru: 'Наше меню', en: 'Our Menu' },
   authenticGerman: { ka: 'ავთენტური გერმანული სამზარეულო ქართული სტუმართმოყვარეობით', ru: 'Аутентичная немецкая кухня с грузинским гостеприимством', en: 'Authentic German cuisine with Georgian hospitality' },
   appetizers: { ka: 'აპეტაიზერი', ru: 'Закуски', en: 'Appetizers' },
   mainCourses: { ka: 'მთავარი კერძები', ru: 'Основные блюда', en: 'Main Courses' },
