@@ -34,7 +34,7 @@ import tsinandaliTelianiImg from '@/assets/MenuImages/წინანდალ�
 import tvishiTelianiImg from '@/assets/MenuImages/ტვიშითელიანიველი.png';
 import mukuzaniTelianiImg from '@/assets/MenuImages/მუკუზანითელიანიველი.png';
 import otskhanurriSaperaviImg from '@/assets/MenuImages/ოცხანურისაფერავითელიანი.png';
-import kindzmarauliTelianiImg from '@/assets/MenuImages/ქინძმარაულითელიანი.png';
+import kindzmarauliTelianiImg from '@/assets/MenuImages/ქინთე.png';
 import khvanchkaraTelianiImg from '@/assets/MenuImages/ხვანჭკარათელიანი.png';
 import familyWhiteDryImg from '@/assets/MenuImages/ჩამოსასხმელითეთრიმშრალიღვინო.jpg';
 import jrbClassicImg from '@/assets/MenuImages/ჯრბ კლასიკი.png';
@@ -63,7 +63,6 @@ import nemiroffImg from '@/assets/MenuImages/ნემიროვი.jpeg';
 import absolutBlueImg from '@/assets/MenuImages/აბსოლუტბლუ.png';
 import absolutCurrantImg from '@/assets/MenuImages/აბსოლუტკურანტი.jpg';
 import oneginImg from '@/assets/MenuImages/ონეგინი.png';
-import kindzmarauliTelianiImg from '@/assets/MenuImages/ქინთე.png';
 import finlandiaImg from '@/assets/MenuImages/ფინლანდია.png';
 import siberianWolfImg from '@/assets/MenuImages/ციმბირულიმგელი.png';
 import homemadeLemonadeJugImg from '@/assets/MenuImages/საფირმოლიმონათიდოქით.jpg';
