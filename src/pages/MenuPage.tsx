@@ -149,7 +149,7 @@ import huntingSausageImg from '@/assets/MenuImages/შემწვარი მ�
 import sausageAssortmentImg from '@/assets/MenuImages/სოსისების ასორტი ტრადიციულად.jpg';
 import austrianSausageBaconImg from '@/assets/MenuImages/ავსტრიული სოსისი ბეკონით (ბეკონში გახვეული სოსისი, მდოგვი, კომბოსტოს მწნილი).avif';
 import chickenWingsImg from '@/assets/MenuImages/ქათმის ფრთები (შებრაწული ფრთები, კარტოფილი ფრი, სოუსი).avif';
-import porkRibsBBQSauceImg from '@/assets/MenuImages/ღორის ნეკნი ბარბექიუს სოუსში.avif';
+import porkRibsBBQSauceImg from '@/assets/MenuImages/ღორის ნეკნი ბარბექიუს სოუსში.avif.jpg';
 import boiledRibsImg from '@/assets/MenuImages/შებოლილი ნეკნი.avif';
 import hamRachulianImg from '@/assets/MenuImages/ლორი რაჭულად კარტოფილით.avif';
 import asianSoupImg from '@/assets/MenuImages/სუპია.avif';
@@ -196,6 +196,7 @@ import pizzaVegetarianImg from '@/assets/MenuImages/პიცასამარ�
 import khachapuriSpecialImg from '@/assets/MenuImages/ხაჭაპურისამეფო.avif';
 import khachapuriAcharuliImg from '@/assets/MenuImages/ხაჭაპურიაჭარული.avif';
 import khachapuriImeretiImg from '@/assets/MenuImages/ხაჭაპურიიმერული.avif';
+import khachapuriSafirmoImg from '@/assets/MenuImages/ხაჭაპურისაფირმო.jpg';
 import lobianiHamImg from '@/assets/MenuImages/ლობიანილორით.avif';
 import lobianiAcharuliImg from '@/assets/MenuImages/აჭარულილობიანი.avif';
 import lobianiImg from '@/assets/MenuImages/ლობიანი.avif';
@@ -683,9 +684,9 @@ const CategorizedMenu = () => {
       { nameKey: 'pizzaBaconName', descKey: 'pizzaBaconDesc', price: '₾22.90', image: pizzaBaconImg },
       { nameKey: 'pizzaMargheritaName', descKey: 'pizzaMargheritaDesc', price: '₾17.90', image: pizzaMargheritaImg },
       { nameKey: 'pizzaVegetarianName', descKey: 'pizzaVegetarianDesc', price: '₾13.90', image: pizzaVegetarianImg },
-      { nameKey: 'khachapuriSpecialName', descKey: 'khachapuriSpecialDesc', price: '₾22.90', image: khachapuriSpecialImg },
       { nameKey: 'khachapuriAcharuliName', descKey: 'khachapuriAcharuliDesc', price: '₾14.95', image: khachapuriAcharuliImg },
       { nameKey: 'khachapuriImeretiName', descKey: 'khachapuriImeretiDesc', price: '₾13.95', image: khachapuriImeretiImg },
+      { nameKey: 'khachapuriSafirmoName', descKey: 'khachapuriSafirmoDesc', price: '₾22.90', image: khachapuriSafirmoImg },
       { nameKey: 'lobianiHamName', descKey: 'lobianiHamDesc', price: '₾14.00', image: lobianiHamImg },
       { nameKey: 'lobianiAcharuliName', descKey: 'lobianiAcharuliDesc', price: '₾10.90', image: lobianiAcharuliImg },
       { nameKey: 'lobianiName', descKey: 'lobianiDesc', price: '₾8.00', image: lobianiImg },
@@ -797,7 +798,7 @@ const CategorizedMenu = () => {
       { nameKey: 'salmonSteakName', descKey: 'salmonSteakDesc', price: '₾35.90', image: salmonSteakImg },
       { nameKey: 'salmonKebabName', descKey: 'salmonKebabDesc', price: '₾25.90', image: salmonKebabImg },
       { nameKey: 'friedSquidName', descKey: 'friedSquidDesc', price: '₾16.00', image: friedSquidImg },
-      { nameKey: 'grilledSquidName', descKey: 'grilledSquidDesc', price: '₾16.00', image: grilledSquidImg }
+      { nameKey: 'grilledSquidName', descKey: 'grilledSquidDesc', price: '₾16.00', image: grilledSquidImg },
     ],
     sideDishes: [
       { nameKey: 'mexicanPotatoName', descKey: 'mexicanPotatoDesc', price: '₾6.90', image: mexicanPotatoImg },
@@ -826,7 +827,8 @@ const CategorizedMenu = () => {
       { nameKey: 'affogatoName', descKey: 'affogatoDesc', price: '₾11.90', image: affogatoImg },
       { nameKey: 'lavaCakeName', descKey: 'lavaCakeDesc', price: '₾9.95', image: lavaCakeImg },
       { nameKey: 'bananaCrepeName', descKey: 'bananaCrepeDesc', price: '₾6.90', image: bananaCrepeImg },
-      { nameKey: 'plainCrepeName', descKey: 'plainCrepeDesc', price: '₾6.90', image: plainCrepeImg }
+      { nameKey: 'plainCrepeName', descKey: 'plainCrepeDesc', price: '₾6.90', image: plainCrepeImg },
+      { nameKey: 'bliniarazhanName', descKey: 'bliniarazhanDesc', price: '₾8.50' }
     ]
   };
 

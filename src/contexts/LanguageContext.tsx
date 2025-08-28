@@ -877,6 +877,10 @@ authenticExperience: { ka: 'ავთენტური ბავარიულ
   friedMusselsName: { ka: 'მიდიები შემწვარი', ru: 'Мидии жареные', en: 'Fried Mussels' },
   friedMusselsDesc: { ka: 'შემწვარი მიდიები', ru: 'Жареные Ⴜидии', en: 'Fried mussels' },
 
+  // Khachapuri Safirmo (Seafood)
+  khachapuriSafirmoName: { ka: 'ხაჭაპურისაფირმო', ru: 'Хачапури фирменное', en: 'Signature Khachapuri' },
+  khachapuriSafirmoDesc: { ka: 'ფირმის ხაჭაპური ზღვის პროდუქტებით', ru: 'Фирменный хачапури с морепродуктами', en: 'Signature khachapuri with seafood' },
+
   blackSeaBarabulkaName: { ka: 'შავი ზღვის ბარაბულკა', ru: 'Черноморская барабулька', en: 'Black Sea Barabulka' },
   blackSeaBarabulkaDesc: { ka: 'შავი ზღვის ბარაბულკა', ru: 'Черноморская барабулька', en: 'Black Sea barabulka fish' },
 
@@ -964,6 +968,9 @@ authenticExperience: { ka: 'ავთენტური ბავარიულ
   plainCrepeName: { ka: 'კრეპი არაფრით', ru: 'Креп без начинки', en: 'Plain Crepe' },
   plainCrepeDesc: { ka: 'უდღილო კრეპი არაფრით', ru: 'Простой креп без начинки', en: 'Simple crepe without filling' },
 
+  // Bliniarazhan (Dessert)
+  bliniarazhanName: { ka: 'ბლინიარაჟანი', ru: 'Блини аражани', en: 'Bliniarazhan' },
+  bliniarazhanDesc: { ka: 'ტრადიციული ქართული ბლინები არაყით', ru: 'Традиционные грузинские блины с араком', en: 'Traditional Georgian pancakes with arak' },
 };
 
 interface LanguageContextType {
