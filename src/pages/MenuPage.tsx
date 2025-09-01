@@ -25,6 +25,7 @@ import weihenstephanUnfilteredImg from '@/assets/MenuImages/ვაიჰენ�
 import weihenstephanDarkImg from '@/assets/MenuImages/ვაიჰენშტეფანიმუქი.avif';
 import budweiserImg from '@/assets/MenuImages/ბუდვაიზერი.avif';
 import beerKegGiraffeImg from '@/assets/MenuImages/ლუდიკასრით(ჟირაფი).jpg';
+import beerPlatterImg from '@/assets/MenuImages/ლუდიდ.avif';
 import rosatoWineImg from '@/assets/MenuImages/როსატო.jpg';
 import rossoWineImg from '@/assets/MenuImages/როსო.jpg';
 import sparklingBagrationiImg from '@/assets/MenuImages/ცქრიალაღვინობაგრატიონი.png';
@@ -81,6 +82,14 @@ import espressoImg from '@/assets/MenuImages/ესპრესო.jpg';
 import doubleEspressoImg from '@/assets/MenuImages/ორმაგიესპრესო.jpg';
 import cappuccinoImg from '@/assets/MenuImages/კაპუჩინო.jpg';
 import latteImg from '@/assets/MenuImages/ლატე.jpg';
+
+// Add cocktail images after the existing imports
+import aperolImg from '@/assets/MenuImages/აპეროლი.jpg';
+import cosmopolitanImg from '@/assets/MenuImages/კოსმოპოლიტენი.jpg';
+import mojitoImg from '@/assets/MenuImages/მოჰიტო.jpg';
+import museumImg from '@/assets/MenuImages/მუზეუმი.jpg';
+import blueLagoonImg from '@/assets/MenuImages/ცისფერი ლაგუნა.jpg';
+
 import turkishCoffeeImg from '@/assets/MenuImages/თურქულიყავა.jpg';
 import hotChocolateImg from '@/assets/MenuImages/ცხელიშოკოლადი.jpg';
 import iceCoffeeImg from '@/assets/MenuImages/ცივიყავა.jpg';
@@ -144,7 +153,6 @@ import lobioPotMchadiImg from '@/assets/MenuImages/ლობიოქოთა�
 import potatoHomestyleImg from '@/assets/MenuImages/კარტოფილიოჯახური.avif';
 import omeletBaconImg from '@/assets/MenuImages/ომლეტიბეკონით.jpg';
 import sulguniSkewerImg from '@/assets/MenuImages/სულგუნიკეცზე.jpeg';
-import beerPlatterImg from '@/assets/MenuImages/ლუდიდ.avif';
 import huntingSausageImg from '@/assets/MenuImages/შემწვარი მონადირული ძეხვი.jpg';
 import sausageAssortmentImg from '@/assets/MenuImages/სოსისების ასორტი ტრადიციულად.jpg';
 import austrianSausageBaconImg from '@/assets/MenuImages/ავსტრიული სოსისი ბეკონით (ბეკონში გახვეული სოსისი, მდოგვი, კომბოსტოს მწნილი).avif';
@@ -188,6 +196,7 @@ import affogatoImg from '@/assets/MenuImages/აფოგატო.jpeg';
 import lavaCakeImg from '@/assets/MenuImages/ლავა ქეიქი.jpeg';
 import bananaCrepeImg from '@/assets/MenuImages/კრეპი ბანანით და შოკოლადით.jpeg';
 import plainCrepeImg from '@/assets/MenuImages/კრეპი არაფრით.png';
+import bliniarazhanImg from '@/assets/MenuImages/ბლინიარაჟნით.jpg';
 import pizzaFourCheeseImg from '@/assets/MenuImages/პიცაოთხიყველით.avif';
 import pizzaPepperoniImg from '@/assets/MenuImages/პიცაპეპერონი.avif';
 import pizzaBaconImg from '@/assets/MenuImages/პიცაბეკონით.avif';
@@ -212,7 +221,7 @@ import ghomiImg from '@/assets/MenuImages/ღომი.png';
 
 const CategorizedMenu = () => {
   const { t } = useLanguage();
-  const [activeCategory, setActiveCategory] = useState('alcoholicDrinks');
+  const [activeCategory, setActiveCategory] = useState('cocktails');
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
@@ -678,6 +687,39 @@ const CategorizedMenu = () => {
         image: peanutsImg
       }
     ],
+    // Add the cocktails category here
+    cocktails: [
+      {
+        nameKey: 'aperolName',
+        descKey: 'aperolDesc',
+        price: '₾19.90',
+        image: aperolImg
+      },
+      {
+        nameKey: 'cosmopolitanName',
+        descKey: 'cosmopolitanDesc',
+        price: '₾11.90',
+        image: cosmopolitanImg
+      },
+      {
+        nameKey: 'museumName',
+        descKey: 'museumDesc',
+        price: '₾24.90',
+        image: museumImg
+      },
+      {
+        nameKey: 'blueLagoonName',
+        descKey: 'blueLagoonDesc',
+        price: '₾17.90',
+        image: blueLagoonImg
+      },
+      {
+        nameKey: 'mojitoName',
+        descKey: 'mojitoDesc',
+        price: '₾14.00',
+        image: mojitoImg
+      }
+    ],
     bakery: [
       { nameKey: 'pizzaFourCheeseName', descKey: 'pizzaFourCheeseDesc', price: '₾25.90', image: pizzaFourCheeseImg },
       { nameKey: 'pizzaPepperoniName', descKey: 'pizzaPepperoniDesc', price: '₾22.90', image: pizzaPepperoniImg },
@@ -798,27 +840,19 @@ const CategorizedMenu = () => {
       { nameKey: 'salmonSteakName', descKey: 'salmonSteakDesc', price: '₾35.90', image: salmonSteakImg },
       { nameKey: 'salmonKebabName', descKey: 'salmonKebabDesc', price: '₾25.90', image: salmonKebabImg },
       { nameKey: 'friedSquidName', descKey: 'friedSquidDesc', price: '₾16.00', image: friedSquidImg },
-      { nameKey: 'grilledSquidName', descKey: 'grilledSquidDesc', price: '₾16.00', image: grilledSquidImg },
+      { nameKey: 'grilledSquidName', descKey: 'grilledSquidDesc', price: '₾16.00', image: grilledSquidImg }
     ],
     sideDishes: [
       { nameKey: 'mexicanPotatoName', descKey: 'mexicanPotatoDesc', price: '₾6.90', image: mexicanPotatoImg },
+      { nameKey: 'frenchFriesName', descKey: 'frenchFriesDesc', price: '₾4.90', image: frenchFriesImg },
+      { nameKey: 'riceWithVegetablesName', descKey: 'riceWithVegetablesDesc', price: '₾7.90', image: riceWithVegetablesImg },
+      { nameKey: 'mashedPotatoName', descKey: 'mashedPotatoDesc', price: '₾4.90', image: mashedPotatoImg }
+    ],
+    sauces: [
       { nameKey: 'frenchFriesName', descKey: 'frenchFriesDesc', price: '₾5.50', image: frenchFriesImg },
       { nameKey: 'riceWithVegetablesName', descKey: 'riceWithVegetablesDesc', price: '₾6.50', image: riceWithVegetablesImg },
       { nameKey: 'mashedPotatoName', descKey: 'mashedPotatoDesc', price: '₾4.90', image: mashedPotatoImg },
       { nameKey: 'ghomiName', descKey: 'ghomiDesc', price: '₾2.90', image: ghomiImg }
-    ],
-    sauces: [
-      { nameKey: 'cheeseSauceName', descKey: 'cheeseSauceDesc', price: '₾8.00', image: cheeseSauceImg },
-      { nameKey: 'mushroomSauceName', descKey: 'mushroomSauceDesc', price: '₾10.00', image: mushroomSauceImg },
-      { nameKey: 'sweetSourSauceName', descKey: 'sweetSourSauceDesc', price: '₾3.00', image: sweetSourSauceImg },
-      { nameKey: 'tkemaliName', descKey: 'tkemaliDesc', price: '₾2.50', image: tkemaliImg },
-      { nameKey: 'satsebliName', descKey: 'satsebliDesc', price: '₾2.50', image: satsebliImg },
-      { nameKey: 'ketchupName', descKey: 'ketchupDesc', price: '₾2.50', image: ketchupImg },
-      { nameKey: 'marashafiName', descKey: 'marashafiDesc', price: '₾2.50', image: marashafiImg },
-      { nameKey: 'garlicWaterName', descKey: 'garlicWaterDesc', price: '₾2.50', image: garlicWaterImg },
-      { nameKey: 'greenSaltName', descKey: 'greenSaltDesc', price: '₾2.50', image: greenSaltImg },
-      { nameKey: 'mexicanSauceName', descKey: 'mexicanSauceDesc', price: '₾2.50', image: mexicanSauceImg },
-      { nameKey: 'mdogviName', descKey: 'mdogviDesc', price: '₾2.50', image: mdogviImg }
     ],
     dessert: [
       { nameKey: 'seasonalFruitName', descKey: 'seasonalFruitDesc', price: '₾19.90', image: seasonalFruitImg },
@@ -828,7 +862,7 @@ const CategorizedMenu = () => {
       { nameKey: 'lavaCakeName', descKey: 'lavaCakeDesc', price: '₾9.95', image: lavaCakeImg },
       { nameKey: 'bananaCrepeName', descKey: 'bananaCrepeDesc', price: '₾6.90', image: bananaCrepeImg },
       { nameKey: 'plainCrepeName', descKey: 'plainCrepeDesc', price: '₾6.90', image: plainCrepeImg },
-      { nameKey: 'bliniarazhanName', descKey: 'bliniarazhanDesc', price: '₾8.50' }
+      { nameKey: 'bliniarazhanName', descKey: 'bliniarazhanDesc', price: '₾8.50', image: bliniarazhanImg }
     ]
   };
 
@@ -848,7 +882,9 @@ const CategorizedMenu = () => {
     { id: 'seafood', nameKey: 'seafood', icon: '🐟' },
     { id: 'sideDishes', nameKey: 'sideDishes', icon: '🥔' },
     { id: 'sauces', nameKey: 'sauces', icon: '🍯' },
-    { id: 'dessert', nameKey: 'dessert', icon: '🍰' }
+    { id: 'dessert', nameKey: 'dessert', icon: '🍰' },
+    // Add cocktails category
+    { id: 'cocktails', nameKey: 'cocktails', icon: '🍹' }
   ];
 
   // Filter items based on search term

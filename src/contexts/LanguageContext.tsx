@@ -265,6 +265,22 @@ cultureDescription: {
   classicCocktailName: { ka: 'კლასიკური კოქტეილი', ru: 'Классический коктейль', en: 'Classic Cocktail' },
   classicCocktailDesc: { ka: 'წითელი კოქტეილი ნარინჯით', ru: 'Красный коктейль с апельсиновым гарниром и льдом', en: 'Red cocktail with orange garnish and ice' },
   
+  // Cocktails
+  aperolName: { ka: 'აპეროლი', ru: 'Апероль', en: 'Aperol' },
+  aperolDesc: { ka: 'აპეროლი, პროსეკო და სოდა', ru: 'Апероль, просекко и сода', en: 'Aperol, prosecco and soda' },
+  
+  cosmopolitanName: { ka: 'კოსმოპოლიტენი', ru: 'Космополитен', en: 'Cosmopolitan' },
+  cosmopolitanDesc: { ka: 'ვოდკა, ტრიპლ სეკი, ჟოლოს წვენი და ლაიმის წვენი', ru: 'Водка, трипл сек, клюквенный сок и сок лайма', en: 'Vodka, triple sec, cranberry juice and lime juice' },
+  
+  mojitoName: { ka: 'მოჰიტო', ru: 'Мохито', en: 'Mojito' },
+  mojitoDesc: { ka: 'თეთრი რომი, შაქარი, ლაიმის წვენი, სოდის წყალი და ნანა', ru: 'Белый ром, сахар, сок лайма, газированная вода и мята', en: 'White rum, sugar, lime juice, soda water and mint' },
+  
+  museumName: { ka: 'მუეზუმი', ru: 'Музей', en: 'Museum' },
+  museumDesc: { ka: 'ვოდკა, ლურჯი კიურასაო, ლიმონათი და ლიმონი', ru: 'Водка, синий кюрасао, лимонад и лимон', en: 'Vodka, blue curaçao, lemonade and lemon' },
+  
+  blueLagoonName: { ka: 'ცისფერი ლაგუნა', ru: 'Голубая лагуна', en: 'Blue Lagoon' },
+  blueLagoonDesc: { ka: 'ვოდკა, ლურჯი კიურასაო, ლიმონათი და ლიმონი', ru: 'Водка, синий кюрасао, лимонад и лимон', en: 'Vodka, blue curaçao, lemonade and lemon' },
+  
   weihenstephanBeerName: { ka: 'ვაიჰენშტეფანის ლუდი', ru: 'Пиво Вайхенштефан', en: 'Weihenstephan Beer' },
   weihenstephanBeerDesc: { ka: 'გერმანული პრემიუმ ხორბლის ლუდი ტრადიციულ მუქში', ru: 'Немецкое премиум пшеничное пиво в традиционной кружке', en: 'German premium wheat beer in traditional mug' },
 
