@@ -275,8 +275,8 @@ cultureDescription: {
   mojitoName: { ka: 'მოჰიტო', ru: 'Мохито', en: 'Mojito' },
   mojitoDesc: { ka: 'თეთრი რომი, შაქარი, ლაიმის წვენი, სოდის წყალი და ნანა', ru: 'Белый ром, сахар, сок лайма, газированная вода и мята', en: 'White rum, sugar, lime juice, soda water and mint' },
   
-  museumName: { ka: 'მუეზუმი', ru: 'Музей', en: 'Museum' },
-  museumDesc: { ka: 'ვოდკა, ლურჯი კიურასაო, ლიმონათი და ლიმონი', ru: 'Водка, синий кюрасао, лимонад и лимон', en: 'Vodka, blue curaçao, lemonade and lemon' },
+  museumName: { ka: 'მუზეუმი', ru: 'Музей', en: 'Museum' },
+  museumDesc: { ka: 'ლუდი', ru: ' Льуди', en: 'Beer' },
   
   blueLagoonName: { ka: 'ცისფერი ლაგუნა', ru: 'Голубая лагуна', en: 'Blue Lagoon' },
   blueLagoonDesc: { ka: 'ვოდკა, ლურჯი კიურასაო, ლიმონათი და ლიმონი', ru: 'Водка, синий кюрасао, лимонад и лимон', en: 'Vodka, blue curaçao, lemonade and lemon' },

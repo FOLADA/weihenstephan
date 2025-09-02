@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 // Importing images from MenuPage for the featured dishes - selecting more visually appealing options
 import seafoodPlatterImg from '@/assets/MenuImages/ზღვისპრ.avif';
 import europeanCheeseBoardImg from '@/assets/MenuImages/ევროპული ყველის დაფა.jpg';
-import bbqPlatterImg from '@/assets/MenuImages/წვადის დაფა (3-4 პერსონა) -=.avif';
+import bbqPlatterImg from '@/assets/MenuImages/მწვადისდაფა.avif';
 import bruschettaBoardImg from '@/assets/MenuImages/ბრუსკეტის დაფა.jpg';
 
 const Menu = () => {

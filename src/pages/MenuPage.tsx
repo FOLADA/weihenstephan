@@ -190,6 +190,7 @@ import greenSaltImg from '@/assets/MenuImages/მწვანე მარილ
 import mexicanSauceImg from '@/assets/MenuImages/მექსიკურის სოუსი.avif';
 import mdogviImg from '@/assets/MenuImages/მდოგვი.avif';
 import seasonalFruitImg from '@/assets/MenuImages/სეზონური ხილის ნაირსახეობა.jpeg';
+import kababisafirmo from '@/assets/MenuImages/საფირმოქაბაბი.jpg';
 import cheesecakeImg from '@/assets/MenuImages/ჩიზქეიქი.avif';
 import tiramisuImg from '@/assets/MenuImages/ტირამისუ.jpeg';
 import affogatoImg from '@/assets/MenuImages/აფოგატო.jpeg';
@@ -772,7 +773,7 @@ const CategorizedMenu = () => {
       { nameKey: 'chickenKebabName', descKey: 'chickenKebabDesc', price: '₾10.95', image: chickenKebabImg },
       { nameKey: 'kabab', descKey: 'kababDesc', price: '₾13.90', image: kababImg },
       { nameKey: 'kababKutaisiName', descKey: 'kababKutaisiDesc', price: '₾15.90', image: kababKutaisiImg },
-      { nameKey: 'kababSignatureName', descKey: 'kababSignatureDesc', price: '₾22.90' },
+      { nameKey: 'kababSignatureName', descKey: 'kababSignatureDesc', price: '₾22.90', image:kababisafirmo},
       { nameKey: 'grilledVegetablesName', descKey: 'grilledVegetablesDesc', price: '₾13.90', image: grilledVegetablesImg }
     ],
     chickenPoultry: [

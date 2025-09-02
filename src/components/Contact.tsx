@@ -152,7 +152,7 @@ const Contact = () => {
                            border-2 border-amber-400/30"
               >
                 <a
-                  href="https://glovoapp.com/ge/en/kutaisi/weih-kut/"
+                  href="https://glovoapp.com/ge/ka/kutaisi/shushabandi-kut?content=dziritadi-kerdzebi-c.2527043777&section=dziritadi-kerdzebi-s.5348930794"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 md:gap-4"
