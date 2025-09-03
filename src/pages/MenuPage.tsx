@@ -106,7 +106,7 @@ import peanutsImg from '@/assets/MenuImages/ქართულიმიწის
 import ajapsandaliPlateImg from '@/assets/MenuImages/აჯაფსანდალიტაფაზე.jpg';
 import caesarShrimpImg from '@/assets/MenuImages/ცეზარიკრევეტებით.jpg';
 import caesarSalmonImg from '@/assets/MenuImages/ცეზარისიოგმით.jpg';
-import caesarChickenImg from '@/assets/MenuImages/ცეზარიქაათმის.jpg';
+import caesarChickenImg from '@/assets/MenuImages/ქათმისცეზარი.jpg';
 import caesarMushroomImg from '@/assets/MenuImages/ცეზარისოკოს.avif';
 import steakSaladImg from '@/assets/MenuImages/სტეიკსალათი.avif';
 import chickenRagoutImg from '@/assets/MenuImages/ქათმისრაგუ.avif';
@@ -123,7 +123,7 @@ import eggplantWalnutImg from '@/assets/MenuImages/ბადრიჯანი�
 import pkhaliPlatterImg from '@/assets/MenuImages/ფხალისდაფა.avif';
 import pickleAssortmentImg from '@/assets/MenuImages/მწნილისნაირსახეობა.avif';
 import porkRibsPicklesSauceImg from '@/assets/MenuImages/ღორის ფერდი მწნილის სალათითა და მაყვლის სოუსით.jpg';
-import bbqPlatterImg from '@/assets/MenuImages/წვადის დაფა (3-4 პერსონა) -=.avif';
+import bbqPlatterImg from '@/assets/MenuImages/მწვადისდაფა.avif';
 import tabakaGrillImg from '@/assets/MenuImages/ტაბაკაგრილზე.avif';
 import tabakaFriedImg from '@/assets/MenuImages/ტაბაკაშებრაწული.avif';
 import chickenShkmeruliImg from '@/assets/MenuImages/წიწილაშქმრეულად.jpeg';

@@ -665,7 +665,7 @@ authenticExperience: { ka: 'ავთენტური ბავარიულ
   caesarShrimpDesc: { ka: 'ცეზარის სალათი ახალი კრევეტებით', ru: 'Салат Цезарь со свежими креветками', en: 'Caesar salad with fresh shrimp' },
 
   caesarSalmonName: { ka: 'ცეზარი სიომგის', ru: 'Цезарь с лососем', en: 'Caesar with Salmon' },
-  caesarSalmonDesc: { ka: 'ცეზარის სალათი მშვენიერი სიომღით', ru: 'Салат Цезарь с копченой семгой', en: 'Caesar salad with smoked salmon' },
+  caesarSalmonDesc: { ka: 'ცეზარის სალათი მშვენიერი სიომგით', ru: 'Салат Цезарь с копченой семгой', en: 'Caesar salad with smoked salmon' },
 
   caesarChickenName: { ka: 'ცეზარი ქათმის', ru: 'Цезарь с курицей', en: 'Caesar with Chicken' },
   caesarChickenDesc: { ka: 'კლასიკური ცეზარის სალათი გრილზე შემწვარი ქათმით', ru: 'Классический салат Цезарь с курицей гриль', en: 'Classic Caesar salad with grilled chicken' },

@@ -70,7 +70,7 @@ const Hero = () => {
                  min-w-[200px] sm:min-w-[220px]"
     >
       <a
-        href="https://glovoapp.com/ge/ka/kutaisi/shushabandi-kut?content=dziritadi-kerdzebi-c.2527043777&section=dziritadi-kerdzebi-s.5348930794"
+        href="https://glovoapp.com/ge/en/kutaisi/weih-kut/"
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-3"
